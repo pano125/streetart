@@ -18,9 +18,10 @@ figure,p{margin:0}
 .process-gallery figure:nth-child(1){grid-column:2/8}
 .process-gallery figure:nth-child(2){grid-column:8/13;margin-top:clamp(40px,8vw,120px)}
 .process-gallery figure:nth-child(3){grid-column:3/11}
-.next{display:flex;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.next{display:flex;flex-wrap:wrap;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .next a{width:50%;padding:40px var(--pad);display:flex;align-items:center;justify-content:center;text-align:center;text-transform:uppercase;font-size:13px}
-.next a+a{border-left:1px solid var(--ink)}
+.next a:nth-child(2){border-left:1px solid var(--ink)}
+.next a:nth-child(3){width:100%;border-top:1px solid var(--ink)}
 .text-works{width:100%;margin:auto;padding:clamp(50px,8vw,120px) 0}
 .text-work{padding:clamp(60px,9vw,135px) var(--pad);text-align:center}
 .text-work:first-child{padding-top:0}
@@ -35,6 +36,7 @@ figure,p{margin:0}
 .catalog-grid{padding:0 0 clamp(80px,10vw,150px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
 .catalog-card{padding:var(--pad);min-height:360px;border-bottom:1px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;gap:36px}
 .catalog-card:nth-child(odd){border-right:1px solid var(--ink)}
+.catalog-card.about-card{grid-column:1/-1;border-right:0}
 .catalog-card img{width:100%;height:320px;object-fit:cover}
 .catalog-card h2{margin:0;font-size:clamp(28px,4vw,58px);line-height:.95;letter-spacing:-.05em;text-transform:uppercase}
 .catalog-card p{margin-top:18px;font-size:13px}
